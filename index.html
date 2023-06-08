@@ -4,10 +4,11 @@
 	</head>
 	<body>
 		<script>
-		
-		
-		
-		
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    const state = urlParams.get("state");
+    const customClaim = "I love Auth";
+    window.location.href = `https://alexanderjames.us.auth0.com/continue?state=${state}&claim=${customClaim}`
 		</script>
 	</body>
 </html>
